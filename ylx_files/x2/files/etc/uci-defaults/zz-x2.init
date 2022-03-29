@@ -55,6 +55,9 @@ uci set 4g.server.sn="${mac}"
 uci commit 4g
 
 
+uci set system.@system[0].hostname="X2"
+uci commit system
+
 uci set rpcd.@login[-1].username='admin'
 uci set rpcd.@login[-1].password='$p$admin'
 uci commit rpcd

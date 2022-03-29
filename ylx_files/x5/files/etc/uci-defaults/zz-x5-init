@@ -81,7 +81,8 @@ uci set wireless.sta2.key='12345678'
 uci set wireless.sta2.disabled='1'
 uci commi wireless
 
-
+uci set system.@system[0].hostname="X5"
+uci commit system
 
 uci set rpcd.@login[-1].username='admin'
 uci set rpcd.@login[-1].password='$p$admin'
