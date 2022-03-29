@@ -167,6 +167,22 @@
 			};
 		};
 
+		i2c {
+			compatible = "i2c-gpio";
+			pinctrl-0 = <&button_pins>;
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			sda-gpios = <&tlmm 47 GPIO_ACTIVE_HIGH>;
+			scl-gpios = <&tlmm 46 GPIO_ACTIVE_HIGH>;
+
+			pcf8563: pcf8563@51 {
+                compatible = "nxp,pcf8563";
+                reg = <0x51>;
+                #clock-cells = <0>;
+        	};
+		};
+
 		leds {
 			compatible = "gpio-leds";
 			pinctrl-0 = <&leds_pins>;
@@ -211,6 +227,21 @@
 };
 
 &tlmm {
+	i2c_gpio_pins:i2c_gpio_pins {
+		scl {
+			pins = "gpio46";
+			function = "gpio";
+			drive-strength = <8>;
+			bias-pull-up;
+		};
+		sda {
+			pins = "gpio47";
+			function = "mdio";
+			drive-strength = <8>;
+			bias-pull-up;
+		};
+	};
+
 	button_pins: button_pins {
 		reset_button {
 			pins = "gpio0";
