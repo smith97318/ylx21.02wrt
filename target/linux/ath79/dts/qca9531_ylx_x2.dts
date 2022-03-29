@@ -134,7 +134,7 @@
 			label = "sim2switch";
 			gpio-export,name = "sim2switch";
 			gpio-export,output = <1>;
-			gpios = <&gpio 9 GPIO_ACTIVE_HIGH>;
+			gpios = <&gpio_ext 9 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
