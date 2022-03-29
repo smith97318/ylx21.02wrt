@@ -1226,6 +1226,15 @@ define Device/glinet_gl-x750
 endef
 TARGET_DEVICES += glinet_gl-x750
 
+define Device/ylx_x2
+  SOC := qca9531
+  DEVICE_VENDOR := YLX
+  DEVICE_MODEL := X2
+  DEVICE_PACKAGES := kmod-usb2
+  IMAGE_SIZE := 16000k
+endef
+TARGET_DEVICES += ylx_x2
+
 define Device/hak5_lan-turtle
   $(Device/tplink-16mlzma)
   SOC := ar9331

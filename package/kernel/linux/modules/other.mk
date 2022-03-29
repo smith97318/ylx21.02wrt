@@ -1271,3 +1271,21 @@ define KernelPackage/f71808e-wdt/description
 endef
 
 $(eval $(call KernelPackage,f71808e-wdt))
+
+define KernelPackage/axp2402
+  SUBMENU:=$(OTHER_MENU)
+  TITLE:=X-power axp2402 battery charger support
+  KCONFIG:=CONFIG_MFD_AXP2402=y \
+			CONFIG_POWER_SUPPLY=y \
+			CONFIG_AXP2402_POWER \
+			CONFIG_HAS_IOMEM=y \
+			CONFIG_I2C=y
+  FILES:=$(LINUX_DIR)/drivers/power/supply/axp2402_charger.ko
+  AUTOLOAD:=$(call AutoLoad,50,axp2402_charger)
+endef
+
+define KernelPackage/axp2402/description
+  This driver provides x-power axp2402 pmu support
+endef
+
+$(eval $(call KernelPackage,axp2402))

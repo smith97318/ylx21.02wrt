@@ -86,10 +86,12 @@ $(subst &,\&,$(subst $(comma),\$(comma),$(subst ','\'',$(subst \,\\,$(1)))))
 endef
 #'
 
+BUILT_DATE := $(shell date +"%Y-%m-%d")
+# -e 's,%C,$(call sed_escape,$(VERSION_CODE)),g' 
 VERSION_SED_SCRIPT:=$(SED) 's,%U,$(call sed_escape,$(VERSION_REPO)),g' \
 	-e 's,%V,$(call sed_escape,$(VERSION_NUMBER)),g' \
 	-e 's,%v,\L$(call sed_escape,$(subst $(space),_,$(VERSION_NUMBER))),g' \
-	-e 's,%C,$(call sed_escape,$(VERSION_CODE)),g' \
+	-e 's,%C,$(call sed_escape,$(BUILT_DATE)),g' \
 	-e 's,%c,\L$(call sed_escape,$(subst $(space),_,$(VERSION_CODE))),g' \
 	-e 's,%D,$(call sed_escape,$(VERSION_DIST)),g' \
 	-e 's,%d,\L$(call sed_escape,$(subst $(space),_,$(VERSION_DIST))),g' \

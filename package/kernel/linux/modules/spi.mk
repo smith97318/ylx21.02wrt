@@ -73,3 +73,36 @@ define KernelPackage/spi-dev/description
 endef
 
 $(eval $(call KernelPackage,spi-dev))
+
+define KernelPackage/ili-9341
+  SUBMENU:=$(SPI_MENU)
+  TITLE:=FB driver for the ILI9341 LCD Controller
+  KCONFIG:=CONFIG_STAGING=y \
+			CONFIG_FB_TFT=y \
+			CONFIG_LCD_PLATFORM=y \
+			CONFIG_BACKLIGHT_PWM=y \
+			CONFIG_FB_TFT_FBTFT_DEVICE=y \
+			CONFIG_FB_TFT_ILI9341=y
+endef
+
+define KernelPackage/ili-9341/description
+	Generic Framebuffer support for ILI9341
+endef
+$(eval $(call KernelPackage,ili-9341))
+
+define KernelPackage/st7789v
+  SUBMENU:=$(SPI_MENU)
+  TITLE:=FB driver for the ST7789V LCD Controller
+  KCONFIG:=CONFIG_STAGING=y \
+			CONFIG_FB_TFT=y \
+			CONFIG_LCD_PLATFORM=y \
+			CONFIG_BACKLIGHT_PWM=y \
+			CONFIG_FB_TFT_FBTFT_DEVICE=y \
+			CONFIG_LCD_CLASS_DEVICE=y \
+			CONFIG_FB_TFT_ST7789V=y
+endef
+
+define KernelPackage/st7789v/description
+	Generic Framebuffer support for ST7789V
+endef
+$(eval $(call KernelPackage,st7789v))
