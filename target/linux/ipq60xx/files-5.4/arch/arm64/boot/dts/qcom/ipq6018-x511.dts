@@ -169,7 +169,7 @@
 
 		i2c {
 			compatible = "i2c-gpio";
-			pinctrl-0 = <&button_pins>;
+			pinctrl-0 = <&i2c_gpio_pins>;
 			#address-cells = <1>;
 			#size-cells = <1>;
 
