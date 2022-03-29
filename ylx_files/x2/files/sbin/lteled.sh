@@ -18,4 +18,13 @@ netdevice2=`uci get config4g.4G1.netdevice`
 echo "$netdevice1" > /sys/class/leds/lte1led/device_name
 echo "$netdevice2" > /sys/class/leds/lte2led/device_name
 
+echo 1 > /sys/class/leds/lte1led/link
+echo 1 > /sys/class/leds/lte1led/tx
+echo 1 > /sys/class/leds/lte1led/rx
+
+echo 1 > /sys/class/leds/lte2led/link
+echo 1 > /sys/class/leds/lte2led/tx
+echo 1 > /sys/class/leds/lte2led/rx
+
+
 # 
