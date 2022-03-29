@@ -33,7 +33,7 @@ case $1 in
          rm -rf files
          cp ylx_files/x2/files/ . -rf
          make V=s $2
-         cp bin/targets/ath79/generic/openwrt-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.bin
+         cp bin/targets/ath79/generic/x2-21.02-v1.0-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.bin
          ;;
      *)
         echo "please input ./build.sh x5/x2 [-j4]."
