@@ -10,8 +10,8 @@
 / {
 	#address-cells = <0x2>;
 	#size-cells = <0x2>;
-	model = "YLX Y6000";
-	compatible = "ylx,y6000", "qcom,ipq6018";
+	model = "YLX X511";
+	compatible = "ylx,x511", "qcom,ipq6018";
 	interrupt-parent = <&intc>;
 	qcom,msm-id = <0x1A5 0x0>;
 

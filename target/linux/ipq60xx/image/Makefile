@@ -32,17 +32,17 @@ define Device/UbiFit
 	IMAGE/nand-sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 
-define Device/ylx_y6000
+define Device/ylx_q60
 	$(call Device/FitImage)
 	$(call Device/UbiFit)
 	DEVICE_VENDOR := YLX
-	DEVICE_MODEL := Y6000
+	DEVICE_MODEL := Q60
 	DEVICE_DTS_CONFIG := config@cp03-c1
 	SOC := ipq6018
 	BLOCKSIZE := 128k
 	PAGESIZE := 2048
 endef
-TARGET_DEVICES += ylx_y6000
+TARGET_DEVICES += ylx_q60
 
 define Device/ylx_x5
 	$(call Device/FitImage)
@@ -55,6 +55,18 @@ define Device/ylx_x5
 	PAGESIZE := 2048
 endef
 TARGET_DEVICES += ylx_x5
+
+define Device/ylx_x8
+	$(call Device/FitImage)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := YLX
+	DEVICE_MODEL := X8
+	DEVICE_DTS_CONFIG := config@cp01-c1
+	SOC := ipq6018
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+endef
+TARGET_DEVICES += ylx_x8
 
 define Device/ylx_x511
 	$(call Device/FitImage)

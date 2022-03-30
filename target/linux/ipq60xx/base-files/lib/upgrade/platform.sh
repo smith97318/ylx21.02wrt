@@ -11,7 +11,7 @@ platform_check_image() {
 platform_do_upgrade() {
 	board=$(board_name)
 	case $board in
-	ylx,y6000|ylx,x5|ylx,x511)
+	ylx,q60|ylx,x5|ylx,x511|ylx,x8)
 		nand_do_upgrade "$1"
 		;;
 	esac

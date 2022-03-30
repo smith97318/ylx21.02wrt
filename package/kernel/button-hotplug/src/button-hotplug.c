@@ -83,6 +83,18 @@ static struct bh_map button_map[] = {
 	BH_MAP(BTN_7,		"BTN_7"),
 	BH_MAP(BTN_8,		"BTN_8"),
 	BH_MAP(BTN_9,		"BTN_9"),
+
+	BH_MAP(KEY_0,		"KEY_0"),
+	BH_MAP(KEY_1,		"KEY_1"),
+	BH_MAP(KEY_2,		"KEY_2"),
+	BH_MAP(KEY_3,		"KEY_3"),
+	BH_MAP(KEY_4,		"KEY_4"),
+	BH_MAP(KEY_5,		"KEY_5"),
+	BH_MAP(KEY_6,		"KEY_6"),
+	BH_MAP(KEY_7,		"KEY_7"),
+	BH_MAP(KEY_8,		"KEY_8"),
+	BH_MAP(KEY_9,		"KEY_9"),
+
 	BH_MAP(KEY_RESTART,	"reset"),
 	BH_MAP(KEY_POWER,	"power"),
 	BH_MAP(KEY_POWER2,	"reboot"),

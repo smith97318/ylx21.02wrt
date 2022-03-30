@@ -10,8 +10,8 @@
 / {
 	#address-cells = <0x2>;
 	#size-cells = <0x2>;
-	model = "YLX Y6000";
-	compatible = "ylx,y6000", "qcom,ipq6018";
+	model = "YLX Q60";
+	compatible = "ylx,q60", "qcom,ipq6018";
 	interrupt-parent = <&intc>;
 	qcom,msm-id = <0x1A5 0x0>;
 
@@ -173,22 +173,22 @@
 			pinctrl-names = "default";
 
 			wlan2g {
-				label = "green:wlan2g";
+				label = "wlan2g";
 				gpios = <&tlmm 37 GPIO_ACTIVE_HIGH>;
 			};
 
 			wlan5g {
-				label = "green:wlan5g";
+				label = "wlan5g";
 				gpios = <&tlmm 35 GPIO_ACTIVE_HIGH>;
 			};
 
 			led_sys: sys {
-				label = "red:sys";
+				label = "sys";
 				gpios = <&tlmm 66 GPIO_ACTIVE_HIGH>;
 			};
 
 			modem {
-				label = "red:modem";
+				label = "modem";
 				gpios = <&tlmm 67 GPIO_ACTIVE_HIGH>;
 			};
 		};
