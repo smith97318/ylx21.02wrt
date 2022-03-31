@@ -36,7 +36,7 @@ fi
     DEVICENAME1=`ls $path1/${path1##*/}:${atindex1}/|grep ttyUSB`
     dev1="/dev/$DEVICENAME1"
 
-    if [ "$CM" = "at"  ];then
+    if [ "$CM1" = "at"  ];then
         atcmd1="$(cat /etc/config/modem.json|jsonfilter -e "@.V${vid1}P${pid1}.dCmd")"
         uci set config4g.4G.atcmd="$atcmd1"
     else
@@ -57,7 +57,7 @@ fi
     DEVICENAME2=`ls $path2/${path2##*/}:${atindex2}/|grep ttyUSB`
     dev2="/dev/$DEVICENAME2"
 
-    if [ "$CM" = "at"  ];then
+    if [ "$CM2" = "at"  ];then
         atcmd2="$(cat /etc/config/modem.json|jsonfilter -e "@.V${vid2}P${pid2}.dCmd")"
         uci set config4g.4G1.atcmd="$atcmd2"
     else

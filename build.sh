@@ -33,7 +33,7 @@ case $1 in
          cp ylx_files/x511/files/ . -rf
          #cp logo/logo_linux_clut224.ppm.5g build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/drivers/video/logo/logo_linux_clut224.ppm
          make V=s $2
-         cp bin/targets/ipq60xx/generic/x511-21.02-v1.0-ipq60xx-generic-ylx_x511-squashfs-nand-factory.ubi firm/$btime-x5.bin
+         cp bin/targets/ipq60xx/generic/x511-21.02-v1.0-ipq60xx-generic-ylx_x511-squashfs-nand-factory.ubi firm/$btime-x511.bin
       ;;
       q60)
          if [ "$lastbuild" = "ipq60xx" ];then
@@ -48,7 +48,7 @@ case $1 in
          cp ylx_files/q60/files/ . -rf
          #cp logo/logo_linux_clut224.ppm.5g build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/drivers/video/logo/logo_linux_clut224.ppm
          make V=s $2
-         cp bin/targets/ipq60xx/generic/q60-21.02-v1.0-ipq60xx-generic-ylx_q60-squashfs-nand-factory.ubi firm/$btime-x5.bin
+         cp bin/targets/ipq60xx/generic/q60-21.02-v1.0-ipq60xx-generic-ylx_q60-squashfs-nand-factory.ubi firm/$btime-q60.bin
       ;;
       x8)
          if [ "$lastbuild" = "ipq60xx" ];then
@@ -63,7 +63,7 @@ case $1 in
          cp ylx_files/x8/files/ . -rf
          #cp logo/logo_linux_clut224.ppm.5g build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/drivers/video/logo/logo_linux_clut224.ppm
          make V=s $2
-         cp bin/targets/ipq60xx/generic/x8-21.02-v1.0-ipq60xx-generic-ylx_x8-squashfs-nand-factory.ubi firm/$btime-x5.bin
+         cp bin/targets/ipq60xx/generic/x8-21.02-v1.0-ipq60xx-generic-ylx_x8-squashfs-nand-factory.ubi firm/$btime-x8.bin
       ;;
       x2)
          if [ "$lastbuild" = "ipq60xx" ];then

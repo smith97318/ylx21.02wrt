@@ -152,7 +152,7 @@
 			qcom,phy-mdio-addr = <28>;
 			phy-mode = "sgmii";
 		};
-
+		
 		gpio_keys {
 			compatible = "gpio-keys";
 			pinctrl-0 = <&button_pins>;
@@ -168,56 +168,56 @@
 			sim11 {
 				label = "sim11";
 				linux,code = <BTN_0>;
-				gpios = <&aw9523b1 0 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim21 {
 				label = "sim21";
 				linux,code = <BTN_1>;
-				gpios = <&aw9523b1 1 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim31 {
 				label = "sim31";
 				linux,code = <BTN_1>;
-				gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 1 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim41 {
 				label = "sim41";
 				linux,code = <BTN_3>;
-				gpios = <&aw9523b1 3 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 0 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim12 {
 				label = "sim12";
 				linux,code = <BTN_4>;
-				gpios = <&aw9523b1 4 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 7 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim22 {
 				label = "sim22";
 				linux,code = <BTN_5>;
-				gpios = <&aw9523b1 5 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 6 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim32 {
 				label = "sim32";
 				linux,code = <BTN_6>;
-				gpios = <&aw9523b1 6 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 5 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim42 {
 				label = "sim42";
 				linux,code = <BTN_7>;
-				gpios = <&aw9523b1 7 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b1 4 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
@@ -225,56 +225,56 @@
 			sim51 {
 				label = "sim51";
 				linux,code = <BTN_8>;
-				gpios = <&aw9523b2 0 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 3 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim61 {
 				label = "sim61";
 				linux,code = <BTN_9>;
-				gpios = <&aw9523b2 1 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 2 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim71 {
 				label = "sim71";
 				linux,code = <KEY_0>;
-				gpios = <&aw9523b2 2 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 1 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim81 {
 				label = "sim81";
 				linux,code = <KEY_1>;
-				gpios = <&aw9523b2 3 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 0 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim52 {
 				label = "sim52";
 				linux,code = <KEY_2>;
-				gpios = <&aw9523b2 4 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 7 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim62 {
 				label = "sim62";
 				linux,code = <KEY_3>;
-				gpios = <&aw9523b2 5 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 6 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim72 {
 				label = "sim72";
 				linux,code = <KEY_4>;
-				gpios = <&aw9523b2 6 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 5 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
 			sim82 {
 				label = "sim82";
 				linux,code = <KEY_5>;
-				gpios = <&aw9523b2 7 GPIO_ACTIVE_LOW>;
+				gpios = <&aw9523b2 4 GPIO_ACTIVE_LOW>;
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
@@ -294,108 +294,108 @@
 			label = "lte1";
 			gpio-export,name = "lte1";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 8 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 11 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte2 {
 			label = "lte2";
 			gpio-export,name = "lte2";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 9 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 10 GPIO_ACTIVE_HIGH>;
 		};
 		lte3 {
 			label = "lte3";
 			gpio-export,name = "lte3";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 10 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 9 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte4 {
 			label = "lte4";
 			gpio-export,name = "lte4";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 11 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 8 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte5 {
 			label = "lte5";
 			gpio-export,name = "lte5";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 8 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 11 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte6 {
 			label = "lte6";
 			gpio-export,name = "lte6";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 9 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 10 GPIO_ACTIVE_HIGH>;
 		};
 		lte7 {
 			label = "lte7";
 			gpio-export,name = "lte7";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 10 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 9 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte8 {
 			label = "lte8";
 			gpio-export,name = "lte8";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 11 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 8 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte1i {
 			label = "lte1i";
 			gpio-export,name = "lte1i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 15 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 12 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte2i {
 			label = "lte2i";
 			gpio-export,name = "lte2i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 14 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 13 GPIO_ACTIVE_HIGH>;
 		};
 		lte3i {
 			label = "lte3i";
 			gpio-export,name = "lte3i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 13 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 14 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte4i {
 			label = "lte4i";
 			gpio-export,name = "lte4i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b1 12 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b1 15 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte5i {
 			label = "lte5i";
 			gpio-export,name = "lte5i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 15 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 12 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte6i {
 			label = "lte6i";
 			gpio-export,name = "lte6i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 14 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 13 GPIO_ACTIVE_HIGH>;
 		};
 		lte7i {
 			label = "lte7i";
 			gpio-export,name = "lte7i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 13 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 14 GPIO_ACTIVE_HIGH>;
 		};
 
 		lte8i {
 			label = "lte8i";
 			gpio-export,name = "lte8i";
 			gpio-export,output = <1>;
-			gpios = <&aw9523b2 12 GPIO_ACTIVE_HIGH>;
+			gpios = <&aw9523b2 15 GPIO_ACTIVE_HIGH>;
 		};
 	};
 
@@ -488,6 +488,12 @@
 	aw9523_irq: aw9523_irq {
 		mux {
 			pins = "gpio51";
+			function = "gpio";
+			drive-strength = <8>;
+			bias-disable;
+		};
+		mux2 {
+			pins = "gpio52";
 			function = "gpio";
 			drive-strength = <8>;
 			bias-disable;
@@ -740,13 +746,13 @@
 				#interrupt-cells = <2>;
 				wakeup-source;
 			};
-			aw9523b2: gpio-expander@5a{
+			aw9523b2: gpio-expander@59{
 				compatible = "awinic,aw9523b-gpio";
-				reg = <0x5a>;
+				reg = <0x59>;
 				pinctrl-names = "default";
 				pinctrl-0 = <&aw9523_irq>;
 				interrupt-parent = <&tlmm>;
-				interrupts = <51 IRQ_TYPE_LEVEL_LOW>;
+				interrupts = <52 IRQ_TYPE_LEVEL_LOW>;
 				gpio-controller;
 				#gpio-cells = <2>;
 				interrupt-controller;
@@ -797,4 +803,12 @@
 
 &rpm_glink {
 	status = "disabled";
+};
+
+&pcie_phy {
+	status = "ok";
+};
+
+&pcie0 {
+	status = "ok";
 };
