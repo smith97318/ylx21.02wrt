@@ -165,119 +165,119 @@
 				linux,input-type = <1>;
 				debounce-interval = <60>;
 			};
-			sim11 {
-				label = "sim11";
-				linux,code = <BTN_0>;
-				gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim21 {
-				label = "sim21";
-				linux,code = <BTN_1>;
-				gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim31 {
-				label = "sim31";
-				linux,code = <BTN_1>;
-				gpios = <&aw9523b1 1 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim41 {
-				label = "sim41";
-				linux,code = <BTN_3>;
-				gpios = <&aw9523b1 0 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim12 {
-				label = "sim12";
-				linux,code = <BTN_4>;
-				gpios = <&aw9523b1 7 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim22 {
-				label = "sim22";
-				linux,code = <BTN_5>;
-				gpios = <&aw9523b1 6 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim32 {
-				label = "sim32";
-				linux,code = <BTN_6>;
-				gpios = <&aw9523b1 5 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim42 {
-				label = "sim42";
-				linux,code = <BTN_7>;
-				gpios = <&aw9523b1 4 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
+			// sim11 {
+			// 	label = "sim11";
+			// 	linux,code = <BTN_0>;
+			// 	gpios = <&aw9523b1 3 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim21 {
+			// 	label = "sim21";
+			// 	linux,code = <BTN_1>;
+			// 	gpios = <&aw9523b1 2 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim31 {
+			// 	label = "sim31";
+			// 	linux,code = <BTN_1>;
+			// 	gpios = <&aw9523b1 1 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim41 {
+			// 	label = "sim41";
+			// 	linux,code = <BTN_3>;
+			// 	gpios = <&aw9523b1 0 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim12 {
+			// 	label = "sim12";
+			// 	linux,code = <BTN_4>;
+			// 	gpios = <&aw9523b1 7 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim22 {
+			// 	label = "sim22";
+			// 	linux,code = <BTN_5>;
+			// 	gpios = <&aw9523b1 6 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim32 {
+			// 	label = "sim32";
+			// 	linux,code = <BTN_6>;
+			// 	gpios = <&aw9523b1 5 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim42 {
+			// 	label = "sim42";
+			// 	linux,code = <BTN_7>;
+			// 	gpios = <&aw9523b1 4 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
 
-			sim51 {
-				label = "sim51";
-				linux,code = <BTN_8>;
-				gpios = <&aw9523b2 3 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim61 {
-				label = "sim61";
-				linux,code = <BTN_9>;
-				gpios = <&aw9523b2 2 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim71 {
-				label = "sim71";
-				linux,code = <KEY_0>;
-				gpios = <&aw9523b2 1 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim81 {
-				label = "sim81";
-				linux,code = <KEY_1>;
-				gpios = <&aw9523b2 0 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim52 {
-				label = "sim52";
-				linux,code = <KEY_2>;
-				gpios = <&aw9523b2 7 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim62 {
-				label = "sim62";
-				linux,code = <KEY_3>;
-				gpios = <&aw9523b2 6 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim72 {
-				label = "sim72";
-				linux,code = <KEY_4>;
-				gpios = <&aw9523b2 5 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
-			sim82 {
-				label = "sim82";
-				linux,code = <KEY_5>;
-				gpios = <&aw9523b2 4 GPIO_ACTIVE_LOW>;
-				linux,input-type = <1>;
-				debounce-interval = <60>;
-			};
+			// sim51 {
+			// 	label = "sim51";
+			// 	linux,code = <BTN_8>;
+			// 	gpios = <&aw9523b2 3 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim61 {
+			// 	label = "sim61";
+			// 	linux,code = <BTN_9>;
+			// 	gpios = <&aw9523b2 2 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim71 {
+			// 	label = "sim71";
+			// 	linux,code = <KEY_0>;
+			// 	gpios = <&aw9523b2 1 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim81 {
+			// 	label = "sim81";
+			// 	linux,code = <KEY_1>;
+			// 	gpios = <&aw9523b2 0 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim52 {
+			// 	label = "sim52";
+			// 	linux,code = <KEY_2>;
+			// 	gpios = <&aw9523b2 7 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim62 {
+			// 	label = "sim62";
+			// 	linux,code = <KEY_3>;
+			// 	gpios = <&aw9523b2 6 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim72 {
+			// 	label = "sim72";
+			// 	linux,code = <KEY_4>;
+			// 	gpios = <&aw9523b2 5 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
+			// sim82 {
+			// 	label = "sim82";
+			// 	linux,code = <KEY_5>;
+			// 	gpios = <&aw9523b2 4 GPIO_ACTIVE_LOW>;
+			// 	linux,input-type = <1>;
+			// 	debounce-interval = <60>;
+			// };
 		};
 
 		gpio-export {
@@ -492,13 +492,16 @@
 			drive-strength = <8>;
 			bias-disable;
 		};
-		mux2 {
-			pins = "gpio52";
-			function = "gpio";
-			drive-strength = <8>;
-			bias-disable;
-		};
 	};
+
+	// aw9523_irq2: aw9523_irq2 {
+	// 	mux {
+	// 		pins = "gpio52";
+	// 		function = "gpio";
+	// 		drive-strength = <8>;
+	// 		bias-disable;
+	// 	};
+	// };
 
 	mdio_pins: mdio_pinmux {
 		mux_0 {
@@ -750,9 +753,9 @@
 				compatible = "awinic,aw9523b-gpio";
 				reg = <0x59>;
 				pinctrl-names = "default";
-				pinctrl-0 = <&aw9523_irq>;
-				interrupt-parent = <&tlmm>;
-				interrupts = <52 IRQ_TYPE_LEVEL_LOW>;
+				// pinctrl-0 = <&aw9523_irq>;
+				// interrupt-parent = <&tlmm>;
+				// interrupts = <51 IRQ_TYPE_LEVEL_LOW>;
 				gpio-controller;
 				#gpio-cells = <2>;
 				interrupt-controller;
