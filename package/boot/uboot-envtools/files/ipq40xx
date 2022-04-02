@@ -59,7 +59,7 @@ linksys,ea8300 |\
 linksys,mr8300)
 	ubootenv_add_uci_config "/dev/mtd7" "0x0" "0x40000" "0x20000"
 	;;
-zyxel,nbg6617)
+zyxel,nbg6617|m4pro)
 	ubootenv_add_uci_config "/dev/mtd6" "0x0" "0x10000" "0x10000"
 	;;
 esac

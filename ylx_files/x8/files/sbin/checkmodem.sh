@@ -361,19 +361,31 @@ uci set 4g.modem6.model="$model6"
 uci set 4g.modem7.model="$model7"
 uci set 4g.modem8.model="$model8"
 
+uci set lte_info.card1.ethName="$netdevice1"
+uci set lte_info.card2.ethName="$netdevice2"
+uci set lte_info.card3.ethName="$netdevice3"
+uci set lte_info.card4.ethName="$netdevice4"
+uci set lte_info.card5.ethName="$netdevice5"
+uci set lte_info.card6.ethName="$netdevice6"
+uci set lte_info.card7.ethName="$netdevice7"
+uci set lte_info.card8.ethName="$netdevice8"
 
+uci set lte_info.card1.ttyName="$dev1"
+uci set lte_info.card2.ttyName="$dev2"
+uci set lte_info.card3.ttyName="$dev3"
+uci set lte_info.card4.ttyName="$dev4"
+uci set lte_info.card5.ttyName="$dev5"
+uci set lte_info.card6.ttyName="$dev6"
+uci set lte_info.card7.ttyName="$dev7"
+uci set lte_info.card8.ttyName="$dev8"
+
+uci commit lte_info
 uci commit 4g
 uci commit config4g
 uci commit network
 
+cp /etc/config/lte_info /tmp/lte_info
 /etc/init.d/config4g restart &
-ifup lte1 
-ifup lte2
-ifup lte3 
-ifup lte4
-ifup lte5 
-ifup lte6
-ifup lte7 
-ifup lte8
-
+/etc/init.d/net_ttyipq restart &
+/etc/init.d/lv_exampleipq restart &
 

@@ -59,6 +59,9 @@ mobipromo,cm520-79f)
 	ucidef_set_led_switch "lan1" "LAN1" "blue:lan1" "switch0" "0x10"
 	ucidef_set_led_switch "lan2" "LAN2" "blue:lan2" "switch0" "0x08"
 	;;
+m4pro)
+	ucidef_set_led_timer "sys"  "SYS" "power" "timer" "50" "50"
+	;;
 netgear,ex6100v2 |\
 netgear,ex6150v2)
 	ucidef_set_led_wlan "wlan2g" "WLAN2G" "green:router" "phy0tpt"

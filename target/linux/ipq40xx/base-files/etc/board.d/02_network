@@ -89,7 +89,7 @@ ipq40xx_setup_interfaces()
 	devolo,magic-2-wifi-next)
 		ucidef_set_interface_lan "eth0 eth1 eth2"
 		;;
-	ezviz,cs-w3-wd1200g-eup)
+	ezviz,cs-w3-wd1200g-eup|m4pro)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
 			"0u@eth0" "2:lan:3" "3:lan:2" "4:lan:1" "0u@eth1" "5:wan"

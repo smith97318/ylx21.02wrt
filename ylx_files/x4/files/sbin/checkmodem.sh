@@ -1,15 +1,9 @@
 #!/bin/sh
 
-path13="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.2"
-path12="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.2"
-
-path23="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.4"
-path22="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.4"
-
-path33="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb4/4-1/4-1.3"
-path32="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.3"
-
-path42="/sys/devices/platform/soc/70f8800.usb2/7000000.dwc3/xhci-hcd.0.auto/usb1/1-1"
+path12="/sys/devices/platform/soc/60f8800.usb2/6000000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.2"
+path22="/sys/devices/platform/soc/60f8800.usb2/6000000.dwc3/xhci-hcd.1.auto/usb3/3-1/3-1.1"
+path32="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.0.auto/usb1/1-1/1-1.2"
+path42="/sys/devices/platform/soc/8af8800.usb3/8a00000.dwc3/xhci-hcd.0.auto/usb1/1-1/1-1.1"
 
 dev1="NULL"
 dev2="NULL"
@@ -20,11 +14,7 @@ netdevice2="NULL"
 netdevice3="NULL"
 netdevice4="NULL"
 
-if ls $path13 > /dev/null 2>&1;then
-    pid1=`cat $path13/idProduct`
-    vid1=`cat $path13/idVendor`
-    path1="$path13"
-elif ls $path12 > /dev/null 2>&1;then
+if ls $path12 > /dev/null 2>&1;then
     pid1=`cat $path12/idProduct`
     vid1=`cat $path12/idVendor`
     path1="$path12"
@@ -33,11 +23,7 @@ else
     vid1=
 fi
 
-if ls $path23 > /dev/null 2>&1;then
-    pid2=`cat $path23/idProduct`
-    vid2=`cat $path23/idVendor`
-    path2="$path23"
-elif ls $path22 > /dev/null 2>&1;then
+if ls $path22 > /dev/null 2>&1;then
     pid2=`cat $path22/idProduct`
     vid2=`cat $path22/idVendor`
     path2="$path22"
@@ -46,11 +32,7 @@ else
     vid2=
 fi
 
-if ls $path33 > /dev/null 2>&1;then
-    pid3=`cat $path33/idProduct`
-    vid3=`cat $path33/idVendor`
-    path3="$path33"
-elif ls $path32 > /dev/null 2>&1;then
+if ls $path32 > /dev/null 2>&1;then
     pid3=`cat $path32/idProduct`
     vid3=`cat $path32/idVendor`
     path3="$path32"

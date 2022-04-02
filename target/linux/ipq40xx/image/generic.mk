@@ -612,6 +612,18 @@ define Device/mobipromo_cm520-79f
 endef
 TARGET_DEVICES += mobipromo_cm520-79f
 
+define Device/m4-pro
+	$(call Device/FitzImage)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := LINK4ALL
+	DEVICE_MODEL := m4pro
+	SOC := qcom-ipq4029
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	DEVICE_PACKAGES := ipq-wifi-mobipromo_cm520-79f kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += m4-pro
+
 define Device/netgear_ex61x0v2
 	$(call Device/DniImage)
 	DEVICE_VENDOR := NETGEAR

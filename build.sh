@@ -80,7 +80,22 @@ case $1 in
          make V=s $2
          cp bin/targets/ath79/generic/x2-21.02-v1.0-ath79-generic-ylx_x2-squashfs-sysupgrade.bin firm/$btime-x2.bin
          ;;
+      x4)
+         if [ "$lastbuild" = "ipq60xx" ];then
+            rm -rf package/kernel/mac80211
+            tar zxvf package/kernel/mac80211.orig.tar.gz -C package/kernel/
+         else
+            echo "last build target is not x5"
+         fi
+         echo "ipq40xx" > lastbuild  
+         rm -rf files
+         cp ylx_files/x4/x4.config .config
+         cp ylx_files/x4/files/ . -rf
+         #cp logo/logo_linux_clut224.ppm.5g build_dir/target-aarch64_cortex-a53_musl/linux-ipq60xx_generic/linux-5.4.164/drivers/video/logo/logo_linux_clut224.ppm
+         make V=s $2
+         cp bin/targets/ipq40xx/generic/x4-21.02-v1.0-ipq40xx-generic-m4-pro-squashfs-nand-factory.ubi firm/$btime-x4-m4pro.bin
+      ;;
      *)
-        echo "please input ./build.sh x5/x511/q60/x8/x2 [-j4]."
+        echo "please input ./build.sh x5/x511/q60/x8/x2/x4 [-j4]."
         ;;
 esac

@@ -77,7 +77,7 @@ glinet,gl-ar150)
 glinet,gl-ar300m-lite|\
 glinet,gl-ar300m-nand|\
 glinet,gl-ar300m-nor|\
-glinet,gl-ar300m16)
+glinet,gl-ar300m16||ylx,x2)
 	idx="$(find_mtd_index u-boot-env)"
 	[ -n "$idx" ] && \
 		ubootenv_add_uci_config "/dev/mtd$idx" "0x0" "0x10000" "0x10000"
