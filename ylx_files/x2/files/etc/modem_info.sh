@@ -15,7 +15,7 @@ setmodem1info(){
   uci set 4g.modem1.imsi=`at_tool "AT+CIMI" -d $ttydev1|grep -E "^[0-9]{15}"|tr -d "\r\n"`
   case $pid1 in
     V12d1P1506)
-      uci set 4g.modem1.iccid=`at_tool "AT^ICCID" -d $ttydev1|grep -E "[0-9]{20}"|cut -d" " -f2|tr -d "\r\n"` 
+      uci set 4g.modem1.iccid=`at_tool "AT^ICCID?" -d $ttydev1|grep -E "[0-9]{20}"|cut -d" " -f2|tr -d "\r\n"` 
       ;;
     *)
     uci set 4g.modem1.iccid=`at_tool "AT+ICCID" -d $ttydev1|grep -E "[0-9]{20}"|cut -d" " -f2|tr -d "\r\n"` 
@@ -30,7 +30,7 @@ setmodem2info(){
   uci set 4g.modem2.imsi=`at_tool "AT+CIMI" -d $ttydev2|grep -E "^[0-9]{15}"|tr -d "\r\n"`
    case $pid1 in
     V12d1P1506)
-      uci set 4g.modem2.iccid=`at_tool "AT^ICCID" -d $ttydev2|grep -E "[0-9]{20}"|cut -d" " -f2|tr -d "\r\n"` 
+      uci set 4g.modem2.iccid=`at_tool "AT^ICCID?" -d $ttydev2|grep -E "[0-9]{20}"|cut -d" " -f2|tr -d "\r\n"` 
       ;;
     *)
       uci set 4g.modem2.iccid=`at_tool "AT+ICCID" -d $ttydev2|grep -E "[0-9]{20}"|cut -d" " -f2|tr -d "\r\n"` 

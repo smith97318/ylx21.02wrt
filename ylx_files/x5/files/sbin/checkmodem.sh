@@ -201,5 +201,5 @@ cp /etc/config/lte_info /tmp/lte_info
 /etc/init.d/net_ttyipq restart &
 /etc/init.d/lv_exampleipq restart &
 
-
+(sleep 3;/etc/init.d/shadowsocksr restart) &
 

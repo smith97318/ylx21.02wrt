@@ -47,6 +47,9 @@ uci set network.wan6.multipath='on'
 uci set network.wwanA.multipath='on'
 uci set network.wwanB.multipath='on'
 uci set network.vpn.multipath='off'
+
+uci set network.@switch_vlan[0].ports="0t 2 3 4 5"
+uci set network.@switch_vlan[1].ports="0t 1"
 uci commit network
 
 uci set firewall.@zone[1].input='ACCEPT'
@@ -80,11 +83,12 @@ uci set wireless.sta2.encryption='psk2'
 uci set wireless.sta2.key='12345678'
 uci set wireless.sta2.disabled='1'
 
+uci set wireless.radio0.htmode="HT40"
 uci set wireless.radio0.noscan=1
 uci set wireless.radio0.ht_coex=1
 uci commi wireless
 
-uci set system.@system[0].hostname="X5"
+uci set system.@system[0].hostname="X4"
 uci commit system
 
 uci set rpcd.@login[-1].username='admin'

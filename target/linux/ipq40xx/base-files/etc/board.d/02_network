@@ -89,7 +89,7 @@ ipq40xx_setup_interfaces()
 	devolo,magic-2-wifi-next)
 		ucidef_set_interface_lan "eth0 eth1 eth2"
 		;;
-	ezviz,cs-w3-wd1200g-eup|m4pro)
+	ezviz,cs-w3-wd1200g-eup)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
 			"0u@eth0" "2:lan:3" "3:lan:2" "4:lan:1" "0u@eth1" "5:wan"
@@ -116,6 +116,11 @@ ipq40xx_setup_interfaces()
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
 			"0u@eth0" "1:lan" "2:lan" "3:lan" "4:lan" "0u@eth1" "5:wan"
+		;;
+	m4pro)
+		ucidef_set_interfaces_lan_wan "eth0" "eth1"
+		ucidef_add_switch "switch0" \
+			"0u@eth0" "2:lan" "3:lan" "4:lan" "5:lan" "0u@eth1" "1:wan"
 		;;
 	*)
 		echo "Unsupported hardware. Network interfaces not initialized"
@@ -180,6 +185,10 @@ ipq40xx_setup_macs()
 	mikrotik,sxtsq-5-ac)
 		lan_mac=$(cat /sys/firmware/mikrotik/hard_config/mac_base)
 		label_mac="$lan_mac"
+		;;
+	m4pro)
+		lan_mac=$(mtd_get_mac_binary "ART" 0x1006)
+		wan_mac=$(macaddr_add "$lan_mac" 2)
 		;;
 	esac
 

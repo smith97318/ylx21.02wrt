@@ -66,4 +66,5 @@ uci commit rpcd
 cp /etc/uhttpd.conf.gargoyle /etc/config/uhttpd
 /etc/init.d/uhttpd restart &
 
-/etc/init.d/network restart &
+
+(sleep 20;/etc/init.d/network) restart &
